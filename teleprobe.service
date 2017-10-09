@@ -1,0 +1,15 @@
+[Unit]
+Description=gobetween probe Telegram Bot
+After=network.target
+
+[Service]
+User=irc
+Group=irc
+WorkingDirectory=/opt/gobetween-teleprobe
+ExecStart=/opt/gobetween-teleprobe/venv/bin/python /opt/gobetween-teleprobe/main.py
+PrivateTmp=true
+Restart=always
+RestartSec=60
+
+[Install]
+WantedBy=multi-user.target

@@ -149,6 +149,9 @@ def j_probe(bot, update):
             msg = 'Backend is online.'
         else:
             msg = 'Backend is offline!'
+
+        gobetween_state = state
+
         for admin in admin_list:
             bot.sendMessage(chat_id=admin, text=msg)
 
